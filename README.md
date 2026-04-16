@@ -10,7 +10,7 @@ Exact geometric model comparison via fibre-volume correction.
 
 ## What it does
 
-nomocomp replaces AIC/BIC parameter-count penalties with the actual log-determinant of the observed Fisher information — the exact fibre-volume correction in the Gaussian-fibre sector.
+nomocomp replaces AIC/BIC parameter-count penalties with the actual log-determinant of the observed Fisher information - the exact fibre-volume correction in the Gaussian-fibre sector.
 
 For nested Gaussian linear models:
 - AIC uses `-2 log L + 2k`
@@ -59,10 +59,10 @@ Extracts the observed Fisher information matrix from fitted statsmodels results.
 
 ```python
 score = extract_information(ols_result, label="M1")
-# score.geometric_score    — exact Laplace score (lower = better)
-# score.information_matrix — observed Fisher information at MLE
-# score.log_det_information — log det(I)
-# score.aic, score.bic     — standard criteria for comparison
+# score.geometric_score    - exact Laplace score (lower = better)
+# score.information_matrix - observed Fisher information at MLE
+# score.log_det_information - log det(I)
+# score.aic, score.bic     - standard criteria for comparison
 ```
 
 ### `nomocomp.comparator`
@@ -71,14 +71,14 @@ Compares multiple fitted models and detects ranking reversals.
 
 ```python
 result = comp.compare({"M1": fit1, "M2": fit2})
-# result.geometric_ranking — models ranked by exact score
-# result.ranking_reversals — where geometric disagrees with AIC/BIC
-# result.branch_reversal   — nomogeo branch-reversal detection
+# result.geometric_ranking - models ranked by exact score
+# result.ranking_reversals - where geometric disagrees with AIC/BIC
+# result.branch_reversal   - nomogeo branch-reversal detection
 ```
 
 ## Honest boundaries
 
-- **Exact in the Gaussian-fibre sector.** For non-Gaussian likelihoods, the information matrix captures local curvature only — still sharper than a parameter count, but not the exact fibre volume.
+- **Exact in the Gaussian-fibre sector.** For non-Gaussian likelihoods, the information matrix captures local curvature only - still sharper than a parameter count, but not the exact fibre volume.
 - **Flat improper prior** on all parameters. For nested models the prior on shared parameters cancels.
 - **"Exact local Laplace"** means exact to quadratic order at the MLE. Not the exact marginal likelihood.
 - **Not yet a state-space comparator.** The state-space comparison pipeline is not yet built.
