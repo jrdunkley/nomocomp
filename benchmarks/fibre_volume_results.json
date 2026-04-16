@@ -1,0 +1,128 @@
+{
+  "core_benchmark": {
+    "name": "pairwise_same_k",
+    "description": "Same-k pairwise comparison: geometric fibre correction vs log-likelihood-only (= AIC/BIC for same k).  Validated against exact Bayesian marginal likelihood.",
+    "config": {
+      "n_trials": 1000,
+      "n_obs": 200,
+      "sigma2": 1.0,
+      "tau2": 10.0,
+      "var_tight": 100.0,
+      "var_loose": 0.01
+    },
+    "exact_agreement_rate": {
+      "geometric": 1.0,
+      "logL_only": 0.504
+    },
+    "when_criteria_disagree": {
+      "n_disagreements": 496,
+      "geo_correct": 496,
+      "logL_correct": 0,
+      "geo_correct_rate": 1.0,
+      "logL_correct_rate": 0.0
+    },
+    "oos_agreement_rate": {
+      "geometric": 0.491,
+      "logL_only": 0.241
+    },
+    "counts": {
+      "geo_agrees_exact": 1000,
+      "logL_agrees_exact": 504,
+      "total": 1000
+    }
+  },
+  "information_contrast": {
+    "2.0": {
+      "var_ratio": 2.0,
+      "var_tight": 1.4142135623730951,
+      "var_loose": 0.7071067811865475,
+      "geo_exact_agreement": 0.99,
+      "logL_exact_agreement": 0.778,
+      "geo_advantage_when_differ": 0.9732142857142857,
+      "n_disagreements": 112,
+      "geo_oos_agreement": 0.28,
+      "logL_oos_agreement": 0.252
+    },
+    "10.0": {
+      "var_ratio": 10.0,
+      "var_tight": 3.1622776601683795,
+      "var_loose": 0.31622776601683794,
+      "geo_exact_agreement": 0.992,
+      "logL_exact_agreement": 0.578,
+      "geo_advantage_when_differ": 0.9859154929577465,
+      "n_disagreements": 213,
+      "geo_oos_agreement": 0.398,
+      "logL_oos_agreement": 0.252
+    },
+    "100.0": {
+      "var_ratio": 100.0,
+      "var_tight": 10.0,
+      "var_loose": 0.1,
+      "geo_exact_agreement": 0.996,
+      "logL_exact_agreement": 0.5,
+      "geo_advantage_when_differ": 0.996,
+      "n_disagreements": 250,
+      "geo_oos_agreement": 0.472,
+      "logL_oos_agreement": 0.252
+    },
+    "1000.0": {
+      "var_ratio": 1000.0,
+      "var_tight": 31.622776601683793,
+      "var_loose": 0.03162277660168379,
+      "geo_exact_agreement": 1.0,
+      "logL_exact_agreement": 0.49,
+      "geo_advantage_when_differ": 1.0,
+      "n_disagreements": 255,
+      "geo_oos_agreement": 0.482,
+      "logL_oos_agreement": 0.252
+    },
+    "10000.0": {
+      "var_ratio": 10000.0,
+      "var_tight": 100.0,
+      "var_loose": 0.01,
+      "geo_exact_agreement": 1.0,
+      "logL_exact_agreement": 0.488,
+      "geo_advantage_when_differ": 1.0,
+      "n_disagreements": 256,
+      "geo_oos_agreement": 0.484,
+      "logL_oos_agreement": 0.252
+    }
+  },
+  "prior_sensitivity": {
+    "0.1": {
+      "tau2": 0.1,
+      "geo_exact_agreement": 0.998,
+      "logL_exact_agreement": 0.49,
+      "geo_advantage_when_differ": 0.99609375,
+      "n_disagreements": 256
+    },
+    "1.0": {
+      "tau2": 1.0,
+      "geo_exact_agreement": 1.0,
+      "logL_exact_agreement": 0.488,
+      "geo_advantage_when_differ": 1.0,
+      "n_disagreements": 256
+    },
+    "10.0": {
+      "tau2": 10.0,
+      "geo_exact_agreement": 1.0,
+      "logL_exact_agreement": 0.488,
+      "geo_advantage_when_differ": 1.0,
+      "n_disagreements": 256
+    },
+    "100.0": {
+      "tau2": 100.0,
+      "geo_exact_agreement": 1.0,
+      "logL_exact_agreement": 0.488,
+      "geo_advantage_when_differ": 1.0,
+      "n_disagreements": 256
+    },
+    "1000.0": {
+      "tau2": 1000.0,
+      "geo_exact_agreement": 1.0,
+      "logL_exact_agreement": 0.488,
+      "geo_advantage_when_differ": 1.0,
+      "n_disagreements": 256
+    }
+  }
+}

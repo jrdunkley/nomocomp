@@ -1,0 +1,98 @@
+{
+  "equal_k": {
+    "name": "equal_k_benchmark",
+    "description": "M_tight and M_loose have k=3 parameters each.  AIC/BIC give them identical penalties.  The geometric score uses log det(I) to distinguish them.",
+    "config": {
+      "n_trials": 500,
+      "n_valid": 500,
+      "n_obs": 200,
+      "var_tight": 100.0,
+      "var_loose": 0.01
+    },
+    "truth_recovery_rate": {
+      "geometric": 0.56,
+      "aic": 0.678,
+      "bic": 0.956
+    },
+    "wrong_model_picks": {
+      "aic_picks_tight": 81,
+      "aic_picks_loose": 80,
+      "geo_picks_tight": 0,
+      "geo_picks_loose": 220
+    },
+    "ranking_disagreement_rate": {
+      "geo_vs_aic": 0.382,
+      "geo_vs_bic": 0.41
+    },
+    "counts": {
+      "geo_correct": 280,
+      "aic_correct": 339,
+      "bic_correct": 478,
+      "total": 500
+    }
+  },
+  "variable_k": {
+    "name": "variable_k_benchmark",
+    "description": "M_fat (k=4, low-info nuisance) vs M_sharp (k=3, high-info nuisance).  Tests whether geometric score correctly distinguishes effective complexity from parameter count.",
+    "config": {
+      "n_trials": 500,
+      "n_valid": 500,
+      "n_obs": 200
+    },
+    "truth_recovery_rate": {
+      "geometric": 0.0,
+      "aic": 0.734,
+      "bic": 0.982
+    },
+    "counts": {
+      "geo_correct": 0,
+      "aic_correct": 367,
+      "bic_correct": 491,
+      "total": 500
+    }
+  },
+  "sample_size_sweep": {
+    "30": {
+      "n_obs": 30,
+      "n_valid": 200,
+      "geo_correct_rate": 0.0,
+      "aic_correct_rate": 0.655,
+      "bic_correct_rate": 0.845
+    },
+    "50": {
+      "n_obs": 50,
+      "n_valid": 200,
+      "geo_correct_rate": 0.0,
+      "aic_correct_rate": 0.685,
+      "bic_correct_rate": 0.9
+    },
+    "100": {
+      "n_obs": 100,
+      "n_valid": 200,
+      "geo_correct_rate": 0.115,
+      "aic_correct_rate": 0.685,
+      "bic_correct_rate": 0.945
+    },
+    "200": {
+      "n_obs": 200,
+      "n_valid": 200,
+      "geo_correct_rate": 0.555,
+      "aic_correct_rate": 0.695,
+      "bic_correct_rate": 0.98
+    },
+    "500": {
+      "n_obs": 500,
+      "n_valid": 200,
+      "geo_correct_rate": 0.795,
+      "aic_correct_rate": 0.75,
+      "bic_correct_rate": 0.975
+    },
+    "1000": {
+      "n_obs": 1000,
+      "n_valid": 200,
+      "geo_correct_rate": 0.875,
+      "aic_correct_rate": 0.66,
+      "bic_correct_rate": 0.97
+    }
+  }
+}

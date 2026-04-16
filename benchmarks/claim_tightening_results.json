@@ -1,0 +1,154 @@
+{
+  "substituted (our benchmark)": {
+    "0.01": {
+      "tau2": 0.01,
+      "agreement_rate": 0.988,
+      "n_agree": 494,
+      "n_total": 500
+    },
+    "0.1": {
+      "tau2": 0.1,
+      "agreement_rate": 1.0,
+      "n_agree": 500,
+      "n_total": 500
+    },
+    "1.0": {
+      "tau2": 1.0,
+      "agreement_rate": 1.0,
+      "n_agree": 500,
+      "n_total": 500
+    },
+    "10.0": {
+      "tau2": 10.0,
+      "agreement_rate": 1.0,
+      "n_agree": 500,
+      "n_total": 500
+    },
+    "100.0": {
+      "tau2": 100.0,
+      "agreement_rate": 1.0,
+      "n_agree": 500,
+      "n_total": 500
+    },
+    "1000.0": {
+      "tau2": 1000.0,
+      "agreement_rate": 1.0,
+      "n_agree": 500,
+      "n_total": 500
+    }
+  },
+  "disjoint predictors": {
+    "0.01": {
+      "tau2": 0.01,
+      "agreement_rate": 0.838,
+      "n_agree": 419,
+      "n_total": 500
+    },
+    "0.1": {
+      "tau2": 0.1,
+      "agreement_rate": 0.918,
+      "n_agree": 459,
+      "n_total": 500
+    },
+    "1.0": {
+      "tau2": 1.0,
+      "agreement_rate": 0.986,
+      "n_agree": 493,
+      "n_total": 500
+    },
+    "10.0": {
+      "tau2": 10.0,
+      "agreement_rate": 0.984,
+      "n_agree": 492,
+      "n_total": 500
+    },
+    "100.0": {
+      "tau2": 100.0,
+      "agreement_rate": 0.984,
+      "n_agree": 492,
+      "n_total": 500
+    },
+    "1000.0": {
+      "tau2": 1000.0,
+      "agreement_rate": 0.984,
+      "n_agree": 492,
+      "n_total": 500
+    }
+  },
+  "correlated predictors": {
+    "0.01": {
+      "tau2": 0.01,
+      "agreement_rate": 0.988,
+      "n_agree": 494,
+      "n_total": 500
+    },
+    "0.1": {
+      "tau2": 0.1,
+      "agreement_rate": 0.998,
+      "n_agree": 499,
+      "n_total": 500
+    },
+    "1.0": {
+      "tau2": 1.0,
+      "agreement_rate": 0.998,
+      "n_agree": 499,
+      "n_total": 500
+    },
+    "10.0": {
+      "tau2": 10.0,
+      "agreement_rate": 0.998,
+      "n_agree": 499,
+      "n_total": 500
+    },
+    "100.0": {
+      "tau2": 100.0,
+      "agreement_rate": 0.998,
+      "n_agree": 499,
+      "n_total": 500
+    },
+    "1000.0": {
+      "tau2": 1000.0,
+      "agreement_rate": 0.998,
+      "n_agree": 499,
+      "n_total": 500
+    }
+  },
+  "adversarial (small contrast)": {
+    "0.01": {
+      "tau2": 0.01,
+      "agreement_rate": 0.764,
+      "n_agree": 382,
+      "n_total": 500
+    },
+    "0.1": {
+      "tau2": 0.1,
+      "agreement_rate": 0.962,
+      "n_agree": 481,
+      "n_total": 500
+    },
+    "1.0": {
+      "tau2": 1.0,
+      "agreement_rate": 0.986,
+      "n_agree": 493,
+      "n_total": 500
+    },
+    "10.0": {
+      "tau2": 10.0,
+      "agreement_rate": 0.988,
+      "n_agree": 494,
+      "n_total": 500
+    },
+    "100.0": {
+      "tau2": 100.0,
+      "agreement_rate": 0.988,
+      "n_agree": 494,
+      "n_total": 500
+    },
+    "1000.0": {
+      "tau2": 1000.0,
+      "agreement_rate": 0.988,
+      "n_agree": 494,
+      "n_total": 500
+    }
+  }
+}

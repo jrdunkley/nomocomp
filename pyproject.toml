@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nomocomp"
+version = "0.1.0"
+description = "Exact geometric model comparison via fibre-volume correction. Companion module for workspaces containing observer_geometry (nomogeo)."
+readme = "README.md"
+license = {text = "BSD-3-Clause"}
+requires-python = ">=3.9"
+authors = [
+    {name = "J. R. Dunkley"},
+]
+dependencies = [
+    "numpy>=1.21",
+    "statsmodels>=0.13",
+    # nomogeo>=0.4.0 is a hard runtime dependency but is not yet published
+    # on PyPI.  It must be available as a sibling directory:
+    #   workspace/
+    #     observer_geometry/src/nomogeo/   <-- nomogeo source
+    #     nomocomp/                        <-- this package
+    # Tests and benchmarks resolve this layout automatically via conftest.py
+    # and benchmarks/_paths.py.  A standalone clone of nomocomp alone will
+    # NOT pass tests until nomogeo is independently installable.
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0",
+    "scikit-learn>=1.0",
+]
+bench = [
+    "scikit-learn>=1.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = ["-p", "no:cacheprovider", "-v"]
